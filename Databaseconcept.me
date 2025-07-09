@@ -1,0 +1,17 @@
+How to store prediction requests and responses in a database
+Answer:
+1. We will maintain a table for each request and its results.
+2. Insert a new row every time prediction call is made.
+3. Timestamp column is set to the current time.
+4. Prediction is the model’s predicted engine condition.
+
+Technologies which we can use are:
+Sqlite
+PostgreSql
+
+
+Sample pgSQL query:
+
+SELECT * FROM prediction_table
+WHERE prediction = 1 ## Fail prediction
+  AND timestamp >= NOW() - INTERVAL '1 day';

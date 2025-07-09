@@ -1,0 +1,12 @@
+Business Insight Summary:
+- From the eda which we performed and other data wrangling we know that Fuel Pressure and Lubrication Oil Temperature show strong patterns separating
+  failed and healthy engines.
+- We also taken care of Outliers and other transformations which significantly reduced skewness and improved quality of the data.
+- The model achieves a recall of around 84%, meaning it can successfully identify most engines that are likely to fail.
+- Precision is 70%, indicating that the majority of flagged engines indeed have issues.
+- From feature engineering we captured complex relationship by adding interction features like temp_pressure_ratio, rpm_temp_ratio.
+- No time series trend present in data.
+
+Recommended actions:
+- Regular maintenance needs to be scheduled for engines with high predicted failure probabilities to reduce downtime and prevent catastrophic failures.
+- Retrain the model regularly with new data sets.
